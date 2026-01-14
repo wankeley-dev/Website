@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | SOTE Ghana</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-card">
+            <div class="login-header">
+                <span class="login-icon">🌿</span>
+                <h1>SOTE Admin</h1>
+                <p>Content Management System</p>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">GitHub Username</label>
+                    <input type="text" id="username" placeholder="e.g., johndoe" required>
+                </div>
+                <div class="form-group">
+                    <label for="repo">Repository Name</label>
+                    <input type="text" id="repo" placeholder="e.g., my-website" required>
+                </div>
+                <div class="form-group">
+                    <label for="token">Personal Access Token</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="token" placeholder="ghp_xxxxxxxxxxxx" required>
+                        <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
+                    </div>
+                    <small>Token is stored locally in your browser only</small>
+                </div>
+                <div class="form-group">
+                    <label for="branch">Branch (optional)</label>
+                    <input type="text" id="branch" placeholder="main" value="main">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <span>Connect to GitHub</span>
+                    <span class="btn-loader" style="display:none;">⏳</span>
+                </button>
+                <p id="loginError" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="admin-dashboard" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-logo">🌿</span>
+                <div>
+                    <h2>SOTE Admin</h2>
+                    <span class="sidebar-user" id="sidebarUser">@username</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-section="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </button>
+                <button class="nav-item" data-section="news">
+                    <span class="nav-icon">📰</span>
+                    <span>News</span>
+                </button>
+                <button class="nav-item" data-section="projects">
+                    <span class="nav-icon">🌳</span>
+                    <span>Projects</span>
+                </button>
+                <button class="nav-item" data-section="events">
+                    <span class="nav-icon">📅</span>
+                    <span>Events</span>
+                </button>
+                <button class="nav-item" data-section="media">
+                    <span class="nav-icon">🖼️</span>
+                    <span>Media</span>
+                </button>
+                <button class="nav-item" data-section="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span>Site Settings</span>
+                </button>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="btn btn-outline btn-small" onclick="visitSite()">
+                    🌐 View Site
+                </button>
+                <button class="btn btn-danger btn-small" onclick="logout()">
+                    🚪 Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="mobile-menu-btn" onclick="toggleSidebar()">☰</button>
+                    <h1 id="pageTitle">Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <span class="sync-status" id="syncStatus">✓ Synced</span>
+                    <button class="btn btn-primary btn-small" id="saveBtn" onclick="saveAllChanges()"
+                        style="display:none;">
+                        💾 Save Changes
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section id="section-dashboard" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📰</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="newsCount">0</span>
+                            <span class="stat-label">News Articles</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌳</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="projectsCount">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="eventsCount">0</span>
+                            <span class="stat-label">Events</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🖼️</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="imagesCount">0</span>
+                            <span class="stat-label">Images</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent News</h3>
+                            <button class="btn btn-small" onclick="navigateTo('news')">View All</button>
+                        </div>
+                        <div class="card-body" id="recentNews">
+                            <p class="loading">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="card-body quick-actions">
+                            <button class="action-btn" onclick="openModal('newsModal')">
+                                <span>📝</span> Add News
+                            </button>
+                            <button class="action-btn" onclick="openModal('projectModal')">
+                                <span>🌳</span> Add Project
+                            </button>
+                            <button class="action-btn" onclick="openModal('eventModal')">
+                                <span>📅</span> Add Event
+                            </button>
+                            <button class="action-btn" onclick="navigateTo('settings')">
+                                <span>🎨</span> Site Colors
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News Section -->
+            <section id="section-news" class="content-section">
+                <div class="section-header">
+                    <h2>News Articles</h2>
+                    <button class="btn btn-primary" onclick="openModal('newsModal')">+ Add Article</button>
+                </div>
+                <div class="items-grid" id="newsGrid">
+                    <p class="loading">Loading...</p>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="section-projects" class="content-section">
+                <div class="section-header">
+                    <h2>Projects</h2>
+                    <button class="btn btn-primary" onclick="openModal('projectModal')">+ Add Project</button>
+                </div>
+                <div class="items-grid" id="projectsGrid">
+                    <p class="loading">Loading...</p>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="section-events" class="content-section">
+                <div class="section-header">
+                    <h2>Events</h2>
+                    <button class="btn btn-primary" onclick="openModal('eventModal')">+ Add Event</button>
+                </div>
+                <div class="items-grid" id="eventsGrid">
+                    <p class="loading">Loading...</p>
+                </div>
+            </section>
+
+            <!-- Media Section -->
+            <section id="section-media" class="content-section">
+                <div class="section-header">
+                    <h2>Media Library</h2>
+                    <label class="btn btn-primary">
+                        📤 Upload Image
+                        <input type="file" id="imageUpload" accept="image/*" style="display:none;"
+                            onchange="uploadImage(event)">
+                    </label>
+                </div>
+                <div class="upload-zone" id="uploadZone">
+                    <span>📁</span>
+                    <p>Drag & drop images here or click Upload</p>
+                </div>
+                <div class="media-grid" id="mediaGrid">
+                    <p class="loading">Loading...</p>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="section-settings" class="content-section">
+                <div class="section-header">
+                    <h2>Site Settings</h2>
+                    <button class="btn btn-primary" onclick="saveSettings()">💾 Save Settings</button>
+                </div>
+                <div class="settings-grid">
+                    <!-- General Settings -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>🏷️ General</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Site Name</label>
+                                <input type="text" id="siteName" placeholder="SOTE">
+                            </div>
+                            <div class="form-group">
+                                <label>Tagline</label>
+                                <input type="text" id="siteTagline" placeholder="Soldiers of the Environment">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea id="siteDescription" rows="3" placeholder="Site description..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Colors -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>🎨 Colors</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="color-grid">
+                                <div class="form-group">
+                                    <label>Primary Color</label>
+                                    <div class="color-input">
+                                        <input type="color" id="colorPrimary" value="#1B4D3E">
+                                        <input type="text" id="colorPrimaryText" value="#1B4D3E">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Secondary Color</label>
+                                    <div class="color-input">
+                                        <input type="color" id="colorSecondary" value="#4A9C6D">
+                                        <input type="text" id="colorSecondaryText" value="#4A9C6D">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>Accent Color</label>
+                                    <div class="color-input">
+                                        <input type="color" id="colorAccent" value="#E8A849">
+                                        <input type="text" id="colorAccentText" value="#E8A849">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Section -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>🖼️ Hero Section</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Badge Text</label>
+                                <input type="text" id="heroBadge" placeholder="🌍 Protecting Ghana's Future Since 2005">
+                            </div>
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input type="text" id="heroTitle" placeholder="Defending Our Environment...">
+                            </div>
+                            <div class="form-group">
+                                <label>Subtitle</label>
+                                <textarea id="heroSubtitle" rows="3" placeholder="Hero subtitle text..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>📊 Statistics</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="stats-inputs">
+                                <div class="stat-input-row">
+                                    <input type="text" id="stat1Value" placeholder="15,000+">
+                                    <input type="text" id="stat1Label" placeholder="Trees Planted">
+                                </div>
+                                <div class="stat-input-row">
+                                    <input type="text" id="stat2Value" placeholder="50+">
+                                    <input type="text" id="stat2Label" placeholder="Communities Reached">
+                                </div>
+                                <div class="stat-input-row">
+                                    <input type="text" id="stat3Value" placeholder="18+">
+                                    <input type="text" id="stat3Label" placeholder="Years of Impact">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>📞 Contact Information</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="contactEmail" placeholder="info@soteghana.org">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" id="contactPhone" placeholder="+233 XX XXX XXXX">
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <input type="text" id="contactAddress" placeholder="Accra, Ghana">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>🔗 Social Media</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Facebook</label>
+                                <input type="url" id="socialFacebook" placeholder="https://facebook.com/...">
+                            </div>
+                            <div class="form-group">
+                                <label>Twitter/X</label>
+                                <input type="url" id="socialTwitter" placeholder="https://twitter.com/...">
+                            </div>
+                            <div class="form-group">
+                                <label>Instagram</label>
+                                <input type="url" id="socialInstagram" placeholder="https://instagram.com/...">
+                            </div>
+                            <div class="form-group">
+                                <label>LinkedIn</label>
+                                <input type="url" id="socialLinkedin" placeholder="https://linkedin.com/...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- News Modal -->
+    <div id="newsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="newsModalTitle">Add News Article</h2>
+                <button class="modal-close" onclick="closeModal('newsModal')">×</button>
+            </div>
+            <form id="newsForm" class="modal-form" onsubmit="saveNews(event)">
+                <input type="hidden" id="newsId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Title *</label>
+                        <input type="text" id="newsTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date *</label>
+                        <input type="date" id="newsDate" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="newsCategory">
+                            <option value="Environment">Environment</option>
+                            <option value="Health">Health</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Youth">Youth</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="General">General</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        <select id="newsImage">
+                            <option value="">Select image...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Excerpt *</label>
+                    <textarea id="newsExcerpt" rows="2" required
+                        placeholder="Brief summary shown in listings..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Full Content</label>
+                    <textarea id="newsContent" rows="6" placeholder="Full article content..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" id="newsFeatured"> Featured</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" id="newsPublished" checked> Published</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('newsModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Article</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="projectModalTitle">Add Project</h2>
+                <button class="modal-close" onclick="closeModal('projectModal')">×</button>
+            </div>
+            <form id="projectForm" class="modal-form" onsubmit="saveProject(event)">
+                <input type="hidden" id="projectId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Title *</label>
+                        <input type="text" id="projectTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="projectCategory">
+                            <option value="Environment">Environment</option>
+                            <option value="Health">Health</option>
+                            <option value="Agriculture">Agriculture</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" id="projectLocation" placeholder="e.g., Ashanti Region">
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="projectStatus">
+                            <option value="ongoing">Ongoing</option>
+                            <option value="completed">Completed</option>
+                            <option value="planned">Planned</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date" id="projectStartDate">
+                    </div>
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <input type="date" id="projectEndDate">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <select id="projectImage">
+                        <option value="">Select image...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Short Description *</label>
+                    <textarea id="projectDescription" rows="2" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Full Description</label>
+                    <textarea id="projectFullDescription" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Impact (one per line)</label>
+                    <textarea id="projectImpact" rows="3"
+                        placeholder="10,000+ trees planted&#10;500+ hectares restored"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" id="projectFeatured"> Featured</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" id="projectPublished" checked> Published</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('projectModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="eventModalTitle">Add Event</h2>
+                <button class="modal-close" onclick="closeModal('eventModal')">×</button>
+            </div>
+            <form id="eventForm" class="modal-form" onsubmit="saveEvent(event)">
+                <input type="hidden" id="eventId">
+                <div class="form-group">
+                    <label>Event Title *</label>
+                    <input type="text" id="eventTitle" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Date *</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Time</label>
+                        <input type="time" id="eventTime">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="eventLocation" placeholder="e.g., Accra, Ghana">
+                </div>
+                <div class="form-group">
+                    <label>Image</label>
+                    <select id="eventImage">
+                        <option value="">Select image...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description *</label>
+                    <textarea id="eventDescription" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Registration Link</label>
+                    <input type="text" id="eventRegistration" placeholder="e.g., contact.html or external URL">
+                </div>
+                <div class="form-row">
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" id="eventFeatured"> Featured</label>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <label><input type="checkbox" id="eventPublished" checked> Published</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('eventModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Event</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>Confirm Delete</h2>
+                <button class="modal-close" onclick="closeModal('deleteModal')">×</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeModal('deleteModal')">Cancel</button>
+                <button class="btn btn-danger" id="confirmDeleteBtn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>

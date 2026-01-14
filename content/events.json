@@ -1,0 +1,40 @@
+{
+    "events": [
+        {
+            "id": "evt-001",
+            "title": "Green Ghana Day 2026",
+            "date": "2026-06-11",
+            "time": "07:00",
+            "location": "Multiple Locations Across Ghana",
+            "description": "Join us for the annual Green Ghana Day tree planting exercise. Volunteers needed across all regions!",
+            "image": "images/project-reforestation.png",
+            "registrationLink": "contact.html",
+            "featured": true,
+            "published": true
+        },
+        {
+            "id": "evt-002",
+            "title": "Community Health Outreach - Volta Region",
+            "date": "2026-02-15",
+            "time": "09:00",
+            "location": "Ho Municipal, Volta Region",
+            "description": "Free health screening, HIV testing, and health education workshop for rural communities.",
+            "image": "images/health-education.png",
+            "registrationLink": "",
+            "featured": false,
+            "published": true
+        },
+        {
+            "id": "evt-003",
+            "title": "Sustainable Agriculture Workshop",
+            "date": "2026-03-20",
+            "time": "08:00",
+            "location": "SOTE Training Center, Kumasi",
+            "description": "Hands-on training in organic farming techniques, composting, and water conservation for farmers.",
+            "image": "images/agriculture.png",
+            "registrationLink": "contact.html",
+            "featured": false,
+            "published": true
+        }
+    ]
+}

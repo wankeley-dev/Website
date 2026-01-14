@@ -1,0 +1,54 @@
+{
+  "siteName": "SOTE",
+  "siteTagline": "Soldiers of the Environment",
+  "siteDescription": "A Ghana-based NGO dedicated to environmental conservation, sustainable agriculture, and community health education.",
+  "foundedYear": 2005,
+  "logo": {
+    "type": "emoji",
+    "value": "🌿"
+  },
+  "colors": {
+    "primary": "#1B4D3E",
+    "primaryLight": "#2D7A5F",
+    "primaryDark": "#0F2E25",
+    "secondary": "#4A9C6D",
+    "accent": "#E8A849",
+    "accentLight": "#F4C77A"
+  },
+  "hero": {
+    "badge": "🌍 Protecting Ghana's Future Since 2005",
+    "title": "Defending Our <span class=\"highlight\">Environment</span> For Future Generations",
+    "subtitle": "We are Soldiers of the Environment — a passionate team of Ghanaians working to preserve our natural heritage, promote sustainable agriculture, and empower communities through health education.",
+    "backgroundImage": "images/hero-bg.png",
+    "ctaPrimary": {
+      "text": "Discover Our Mission",
+      "link": "about.html"
+    },
+    "ctaSecondary": {
+      "text": "Support Our Cause",
+      "link": "contact.html"
+    }
+  },
+  "stats": [
+    { "value": "15000+", "label": "Trees Planted" },
+    { "value": "50+", "label": "Communities Reached" },
+    { "value": "18+", "label": "Years of Impact" }
+  ],
+  "contact": {
+    "email": "info@soteghana.org",
+    "phone": "+233 XX XXX XXXX",
+    "address": "Accra, Ghana",
+    "mapEmbed": ""
+  },
+  "social": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#",
+    "linkedin": "#",
+    "youtube": ""
+  },
+  "footer": {
+    "copyright": "© 2025 Soldiers of the Environment (SOTE). All rights reserved.",
+    "tagline": "Made with 💚 in Ghana"
+  }
+}
