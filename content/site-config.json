@@ -5,7 +5,7 @@
   "foundedYear": 2005,
   "logo": {
     "type": "emoji",
-    "value": "ð¿"
+    "value": "Ã°ÂÂÂ¿"
   },
   "colors": {
     "primary": "#1b4d3e",
@@ -16,9 +16,9 @@
     "accentLight": "#F4C77A"
   },
   "hero": {
-    "badge": "ð Protecting Ghana's Future Since 2005",
+    "badge": "Ã°ÂÂÂ Protecting Ghana's Future Since 2005",
     "title": "Defending Our <span class=\"highlight\">Environment</span> For Future Generations",
-    "subtitle": "We are Soldiers of the Environment â a passionate team of Ghanaians working to preserve our natural heritage, promote sustainable agriculture, and empower communities through health education.",
+    "subtitle": "We are Soldiers of the Environment Ã¢ÂÂ a passionate team of Ghanaians working to preserve our natural heritage, promote sustainable agriculture, and empower communities through health education.",
     "backgroundImage": "images/hero-bg.png",
     "ctaPrimary": {
       "text": "Discover Our Mission",
@@ -44,7 +44,7 @@
     }
   ],
   "contact": {
-    "email": "info@soteghana.org",
+    "email": "ebenTechnology@gmail.com",
     "phone": "+233 XX XXX XXXX",
     "address": "Accra, Ghana"
   },
@@ -55,7 +55,7 @@
     "linkedin": "#"
   },
   "footer": {
-    "copyright": "Â© 2025 Soldiers of the Environment (SOTE). All rights reserved.",
-    "tagline": "Made with ð in Ghana"
+    "copyright": "ÃÂ© 2025 Soldiers of the Environment (SOTE). All rights reserved.",
+    "tagline": "Made with Ã°ÂÂÂ in Ghana"
   }
 }
