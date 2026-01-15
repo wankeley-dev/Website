@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Stay updated with the latest news, events, and activities from SOTE Ghana's environmental and community programs.">
-    <title>News & Updates | SOTE Ghana</title>
+        content="Join SOTE Ghana's upcoming events. Volunteer for tree planting, health outreach, and community programs across Ghana.">
+    <title>Events | SOTE Ghana</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
@@ -24,8 +24,8 @@
                 <li><a href="about.html" class="nav-link">About Us</a></li>
                 <li><a href="what-we-do.html" class="nav-link">What We Do</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="events.html" class="nav-link">Events</a></li>
-                <li><a href="news.html" class="nav-link active">News</a></li>
+                <li><a href="events.html" class="nav-link active">Events</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
                 <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -37,44 +37,71 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>News & Updates</h1>
-            <p>Stay informed about our latest activities, events, and impact stories from across Ghana.</p>
+            <h1>Upcoming Events</h1>
+            <p>Join us in making a difference. Volunteer, participate, and be part of positive change in Ghana.</p>
             <div class="breadcrumb">
-                <a href="index.html">Home</a> / <span>News</span>
+                <a href="index.html">Home</a> / <span>Events</span>
             </div>
         </div>
     </section>
 
-    <!-- News Grid -->
+    <!-- Events Section -->
     <section class="section">
         <div class="container">
-            <!-- News articles will be loaded dynamically from news.json -->
-            <div class="news-grid">
-                <p class="loading-message"
-                    style="text-align: center; grid-column: 1/-1; padding: 2rem; color: var(--text-muted);">Loading news
-                    articles...</p>
+            <div class="section-header reveal">
+                <span class="section-label">Get Involved</span>
+                <h2 class="section-title">Join Our Events</h2>
+                <p class="section-text">
+                    From tree planting drives to health outreach programs, there are many ways
+                    to participate in SOTE's mission. Check out our upcoming events and register today.
+                </p>
             </div>
 
-            <!-- Load More -->
-            <div style="text-align: center; margin-top: 3rem;">
-                <button class="btn btn-outline-dark">Load More Stories</button>
+            <!-- Events will be loaded dynamically from events.json -->
+            <div class="events-container" id="eventsContainer">
+                <p class="loading-message" style="text-align: center; padding: 2rem; color: var(--text-muted);">Loading
+                    events...</p>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter CTA -->
+    <!-- Volunteer CTA -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Make an Impact</span>
+                <h2 class="section-title">Become a Volunteer</h2>
+                <p class="section-text">
+                    Can't make it to an event? You can still help! Join our volunteer network
+                    and be notified of opportunities in your area.
+                </p>
+            </div>
+            <div style="text-align: center;">
+                <a href="contact.html" class="btn btn-primary">Sign Up to Volunteer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events Highlight -->
     <section class="section section-dark">
         <div class="container">
-            <div class="cta-content reveal" style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <h2>Never Miss an Update</h2>
-                <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">
-                    Subscribe to our newsletter and be the first to know about our projects,
-                    events, and impact stories.
-                </p>
-                <form class="newsletter-form" style="max-width: 450px; margin: 0 auto;">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
-                    <button type="submit" class="newsletter-btn">Subscribe</button>
-                </form>
+            <div class="section-header reveal">
+                <span class="section-label">Our Track Record</span>
+                <h2 class="section-title">Event Impact</h2>
+            </div>
+            <div class="hero-stats" style="justify-content: center; border: none; padding: 0;">
+                <div class="stat-item" style="text-align: center;">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Events Organized</div>
+                </div>
+                <div class="stat-item" style="text-align: center;">
+                    <div class="stat-number">3,000+</div>
+                    <div class="stat-label">Volunteers Engaged</div>
+                </div>
+                <div class="stat-item" style="text-align: center;">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Partner Organizations</div>
+                </div>
             </div>
         </div>
     </section>
@@ -102,6 +129,7 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="what-we-do.html">What We Do</a></li>
                         <li><a href="projects.html">Projects</a></li>
+                        <li><a href="events.html">Events</a></li>
                         <li><a href="news.html">News</a></li>
                     </ul>
                 </div>
