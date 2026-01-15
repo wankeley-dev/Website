@@ -1,61 +1,61 @@
 {
-    "projects": [
-        {
-            "id": "proj-001",
-            "title": "Green Ghana Reforestation",
-            "category": "Environment",
-            "image": "images/project-reforestation.png",
-            "description": "Planting 10,000+ native trees across degraded lands in the Ashanti and Eastern regions to combat deforestation and climate change.",
-            "fullDescription": "Our flagship reforestation initiative aims to restore degraded lands across the Ashanti and Eastern regions. Working with local communities, schools, and government agencies, we plant native tree species that are adapted to local conditions and provide multiple benefits including carbon sequestration, soil protection, and habitat for wildlife.\n\nThe project includes a tree nursery program where community members are trained to raise seedlings, creating both environmental and economic benefits.",
-            "location": "Ashanti Region",
-            "startDate": "2020-01-01",
-            "endDate": null,
-            "status": "ongoing",
-            "impact": [
-                "10,000+ trees planted",
-                "500+ hectares restored",
-                "20 communities engaged"
-            ],
-            "featured": true,
-            "published": true
-        },
-        {
-            "id": "proj-002",
-            "title": "HIV/AIDS Awareness Campaign",
-            "category": "Health",
-            "image": "images/health-education.png",
-            "description": "Community-based education program reaching over 15,000 people with vital information about HIV prevention, testing, and treatment.",
-            "fullDescription": "Our HIV/AIDS Awareness Campaign brings critical health education to underserved rural communities in Northern Ghana. Through community workshops, school programs, and peer education networks, we provide accurate information about HIV prevention, reduce stigma, and connect people with testing and treatment services.\n\nWe work closely with local health facilities to ensure community members have access to testing, counseling, and antiretroviral therapy.",
-            "location": "Northern Ghana",
-            "startDate": "2015-06-01",
-            "endDate": "2022-12-31",
-            "status": "completed",
-            "impact": [
-                "15,000+ people educated",
-                "50+ communities reached",
-                "500+ HIV tests facilitated"
-            ],
-            "featured": true,
-            "published": true
-        },
-        {
-            "id": "proj-003",
-            "title": "Sustainable Farming Initiative",
-            "category": "Agriculture",
-            "image": "images/agriculture.png",
-            "description": "Training smallholder farmers in organic farming, crop rotation, and water conservation to improve yields and protect soil health.",
-            "fullDescription": "The Sustainable Farming Initiative empowers smallholder farmers with knowledge and skills for environmentally-friendly agriculture. Our training programs cover organic farming methods, integrated pest management, composting, crop rotation, and water-efficient irrigation techniques.\n\nParticipating farmers report improved yields, reduced input costs, and healthier soils. We also help farmers access markets for organic produce.",
-            "location": "Volta Region",
-            "startDate": "2018-03-01",
-            "endDate": null,
-            "status": "ongoing",
-            "impact": [
-                "150+ farmers trained",
-                "30% average yield increase",
-                "50% reduction in chemical use"
-            ],
-            "featured": true,
-            "published": true
-        }
-    ]
+  "projects": [
+    {
+      "id": "proj-001",
+      "title": "Green Ghana Reforestation",
+      "category": "Environment",
+      "location": "Ashanti Region",
+      "status": "ongoing",
+      "startDate": "2020-01-01",
+      "endDate": null,
+      "image": "images/project-reforestation.png",
+      "description": "Planting 10,000+ native trees across degraded lands in the Ashanti and Eastern regions to combat deforestation and climate change.",
+      "fullDescription": "Our flagship reforestation initiative aims to restore degraded lands across the Ashanti and Eastern regions. Working with local communities, schools, and government agencies, we plant native tree species that are adapted to local conditions and provide multiple benefits including carbon sequestration, soil protection, and habitat for wildlife.\n\nThe project includes a tree nursery program where community members are trained to raise seedlings, creating both environmental and economic benefits.",
+      "impact": [
+        "10,000+ trees planted",
+        "500+ hectares restored",
+        "20 communities engaged"
+      ],
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "proj-002",
+      "title": "HIV/AIDS Awareness Campaign",
+      "category": "Health",
+      "image": "images/health-education.png",
+      "description": "Community-based education program reaching over 15,000 people with vital information about HIV prevention, testing, and treatment.",
+      "fullDescription": "Our HIV/AIDS Awareness Campaign brings critical health education to underserved rural communities in Northern Ghana. Through community workshops, school programs, and peer education networks, we provide accurate information about HIV prevention, reduce stigma, and connect people with testing and treatment services.\n\nWe work closely with local health facilities to ensure community members have access to testing, counseling, and antiretroviral therapy.",
+      "location": "Northern Ghana",
+      "startDate": "2015-06-01",
+      "endDate": "2022-12-31",
+      "status": "completed",
+      "impact": [
+        "15,000+ people educated",
+        "50+ communities reached",
+        "500+ HIV tests facilitated"
+      ],
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "proj-003",
+      "title": "Sustainable Farming Initiative",
+      "category": "Agriculture",
+      "image": "images/agriculture.png",
+      "description": "Training smallholder farmers in organic farming, crop rotation, and water conservation to improve yields and protect soil health.",
+      "fullDescription": "The Sustainable Farming Initiative empowers smallholder farmers with knowledge and skills for environmentally-friendly agriculture. Our training programs cover organic farming methods, integrated pest management, composting, crop rotation, and water-efficient irrigation techniques.\n\nParticipating farmers report improved yields, reduced input costs, and healthier soils. We also help farmers access markets for organic produce.",
+      "location": "Volta Region",
+      "startDate": "2018-03-01",
+      "endDate": null,
+      "status": "ongoing",
+      "impact": [
+        "150+ farmers trained",
+        "30% average yield increase",
+        "50% reduction in chemical use"
+      ],
+      "featured": true,
+      "published": true
+    }
+  ]
 }
