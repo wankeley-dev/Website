@@ -1,70 +1,81 @@
 {
-    "articles": [
-        {
-            "id": "news-001",
-            "title": "SOTE Plants 2,000 Trees in Annual Green Ghana Day Event",
-            "date": "2025-01-08",
-            "image": "images/project-reforestation.png",
-            "excerpt": "In celebration of Green Ghana Day, SOTE mobilized over 200 volunteers across three regions to plant thousands of native tree seedlings...",
-            "content": "In celebration of Green Ghana Day, SOTE mobilized over 200 volunteers across three regions to plant thousands of native tree seedlings. This initiative is part of our ongoing commitment to reforestation and combating climate change in Ghana.\n\nVolunteers from schools, community groups, and corporate partners joined hands to plant indigenous species including mahogany, cedar, and shea trees. The event was particularly significant as it marked our largest single-day planting effort.\n\nWe extend our heartfelt thanks to all participants and sponsors who made this possible.",
-            "category": "Environment",
-            "featured": true,
-            "published": true
-        },
-        {
-            "id": "news-002",
-            "title": "New Youth Environmental Ambassadors Graduate from Training Program",
-            "date": "2024-12-15",
-            "image": "images/about-team.png",
-            "excerpt": "Forty young Ghanaians from Greater Accra region have completed our intensive environmental leadership training program...",
-            "content": "Forty young Ghanaians from Greater Accra region have completed our intensive environmental leadership training program, emerging as certified Youth Environmental Ambassadors.\n\nOver six months, these dedicated young people learned about environmental conservation, sustainable practices, community organizing, and advocacy skills. They are now equipped to lead environmental initiatives in their own communities.\n\nThe graduation ceremony was attended by local leaders, parents, and environmental advocates.",
-            "category": "Youth",
-            "featured": false,
-            "published": true
-        },
-        {
-            "id": "news-003",
-            "title": "World AIDS Day: SOTE Reaches 500 People with HIV Awareness Campaign",
-            "date": "2024-11-28",
-            "image": "images/health-education.png",
-            "excerpt": "Marking World AIDS Day, our health team conducted community outreach sessions in five villages, providing free HIV testing and education...",
-            "content": "Marking World AIDS Day, our health team conducted community outreach sessions in five villages, providing free HIV testing and education to over 500 community members.\n\nOur trained health educators distributed educational materials, conducted group sessions, and offered private counseling. Working in partnership with local health facilities, we were able to provide free testing services and referrals for those who needed follow-up care.\n\nThis campaign is part of SOTE's ongoing commitment to community health education.",
-            "category": "Health",
-            "featured": false,
-            "published": true
-        },
-        {
-            "id": "news-004",
-            "title": "Sustainable Farming Field Day Draws 150 Farmers in Volta Region",
-            "date": "2024-10-20",
-            "image": "images/agriculture.png",
-            "excerpt": "Our annual Farmers Field Day brought together smallholder farmers to learn about composting, crop rotation, and water-efficient irrigation...",
-            "content": "Our annual Farmers Field Day brought together 150 smallholder farmers to learn about composting, crop rotation, and water-efficient irrigation techniques.\n\nHeld at our demonstration farm in the Volta Region, farmers participated in hands-on workshops covering organic pest control, soil health management, and sustainable water use. Agricultural experts shared practical knowledge that farmers can immediately apply to their own fields.\n\nParticipants also networked with each other, forming farmer support groups for ongoing knowledge sharing.",
-            "category": "Agriculture",
-            "featured": false,
-            "published": true
-        },
-        {
-            "id": "news-005",
-            "title": "SOTE Signs MoU with Forestry Commission for Conservation Partnership",
-            "date": "2024-09-05",
-            "image": "images/hero-bg.png",
-            "excerpt": "In a significant milestone, SOTE has formalized a partnership with Ghana's Forestry Commission to collaborate on community-based forest protection...",
-            "content": "In a significant milestone, SOTE has formalized a partnership with Ghana's Forestry Commission to collaborate on community-based forest protection initiatives.\n\nThe Memorandum of Understanding establishes a framework for joint conservation efforts, including community forest management programs, anti-illegal logging campaigns, and reforestation projects in degraded forest reserves.\n\nThis partnership strengthens our capacity to protect Ghana's remaining forests while engaging local communities as stewards of these vital ecosystems.",
-            "category": "Partnership",
-            "featured": true,
-            "published": true
-        },
-        {
-            "id": "news-006",
-            "title": "Community Cleanup Drive Removes 2 Tons of Plastic Waste",
-            "date": "2024-08-12",
-            "image": "images/about-team.png",
-            "excerpt": "Working with local youth groups, SOTE organized a massive beach and community cleanup in Tema, collecting over 2,000kg of plastic waste...",
-            "content": "Working with local youth groups, SOTE organized a massive beach and community cleanup in Tema, collecting over 2,000kg of plastic waste from beaches and waterways.\n\nOver 150 volunteers from schools, youth clubs, and community organizations participated in the cleanup. The collected waste was sorted for recycling, with plastics being sent to recycling facilities and organic waste composted.\n\nThis event highlighted the urgent need for better waste management and reduced plastic use in our communities.",
-            "category": "Environment",
-            "featured": false,
-            "published": true
-        }
-    ]
+  "articles": [
+    {
+      "id": "news-1768477763815",
+      "title": "Try",
+      "date": "0226-01-15",
+      "category": "Youth",
+      "image": "images/hl6ch-faltering-global-growth-shows-no-signs-of-picking-up-in-the-near-term.webp",
+      "excerpt": "trying my news functionality",
+      "content": "trying the news functionality to see whether it works and everything is up to point",
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "news-001",
+      "title": "SOTE Plants 2,000 Trees in Annual Green Ghana Day Event",
+      "date": "2025-01-08",
+      "image": "images/project-reforestation.png",
+      "excerpt": "In celebration of Green Ghana Day, SOTE mobilized over 200 volunteers across three regions to plant thousands of native tree seedlings...",
+      "content": "In celebration of Green Ghana Day, SOTE mobilized over 200 volunteers across three regions to plant thousands of native tree seedlings. This initiative is part of our ongoing commitment to reforestation and combating climate change in Ghana.\n\nVolunteers from schools, community groups, and corporate partners joined hands to plant indigenous species including mahogany, cedar, and shea trees. The event was particularly significant as it marked our largest single-day planting effort.\n\nWe extend our heartfelt thanks to all participants and sponsors who made this possible.",
+      "category": "Environment",
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "news-002",
+      "title": "New Youth Environmental Ambassadors Graduate from Training Program",
+      "date": "2024-12-15",
+      "image": "images/about-team.png",
+      "excerpt": "Forty young Ghanaians from Greater Accra region have completed our intensive environmental leadership training program...",
+      "content": "Forty young Ghanaians from Greater Accra region have completed our intensive environmental leadership training program, emerging as certified Youth Environmental Ambassadors.\n\nOver six months, these dedicated young people learned about environmental conservation, sustainable practices, community organizing, and advocacy skills. They are now equipped to lead environmental initiatives in their own communities.\n\nThe graduation ceremony was attended by local leaders, parents, and environmental advocates.",
+      "category": "Youth",
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": "news-003",
+      "title": "World AIDS Day: SOTE Reaches 500 People with HIV Awareness Campaign",
+      "date": "2024-11-28",
+      "image": "images/health-education.png",
+      "excerpt": "Marking World AIDS Day, our health team conducted community outreach sessions in five villages, providing free HIV testing and education...",
+      "content": "Marking World AIDS Day, our health team conducted community outreach sessions in five villages, providing free HIV testing and education to over 500 community members.\n\nOur trained health educators distributed educational materials, conducted group sessions, and offered private counseling. Working in partnership with local health facilities, we were able to provide free testing services and referrals for those who needed follow-up care.\n\nThis campaign is part of SOTE's ongoing commitment to community health education.",
+      "category": "Health",
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": "news-004",
+      "title": "Sustainable Farming Field Day Draws 150 Farmers in Volta Region",
+      "date": "2024-10-20",
+      "image": "images/agriculture.png",
+      "excerpt": "Our annual Farmers Field Day brought together smallholder farmers to learn about composting, crop rotation, and water-efficient irrigation...",
+      "content": "Our annual Farmers Field Day brought together 150 smallholder farmers to learn about composting, crop rotation, and water-efficient irrigation techniques.\n\nHeld at our demonstration farm in the Volta Region, farmers participated in hands-on workshops covering organic pest control, soil health management, and sustainable water use. Agricultural experts shared practical knowledge that farmers can immediately apply to their own fields.\n\nParticipants also networked with each other, forming farmer support groups for ongoing knowledge sharing.",
+      "category": "Agriculture",
+      "featured": false,
+      "published": true
+    },
+    {
+      "id": "news-005",
+      "title": "SOTE Signs MoU with Forestry Commission for Conservation Partnership",
+      "date": "2024-09-05",
+      "image": "images/hero-bg.png",
+      "excerpt": "In a significant milestone, SOTE has formalized a partnership with Ghana's Forestry Commission to collaborate on community-based forest protection...",
+      "content": "In a significant milestone, SOTE has formalized a partnership with Ghana's Forestry Commission to collaborate on community-based forest protection initiatives.\n\nThe Memorandum of Understanding establishes a framework for joint conservation efforts, including community forest management programs, anti-illegal logging campaigns, and reforestation projects in degraded forest reserves.\n\nThis partnership strengthens our capacity to protect Ghana's remaining forests while engaging local communities as stewards of these vital ecosystems.",
+      "category": "Partnership",
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "news-006",
+      "title": "Community Cleanup Drive Removes 2 Tons of Plastic Waste",
+      "date": "2024-08-12",
+      "image": "images/about-team.png",
+      "excerpt": "Working with local youth groups, SOTE organized a massive beach and community cleanup in Tema, collecting over 2,000kg of plastic waste...",
+      "content": "Working with local youth groups, SOTE organized a massive beach and community cleanup in Tema, collecting over 2,000kg of plastic waste from beaches and waterways.\n\nOver 150 volunteers from schools, youth clubs, and community organizations participated in the cleanup. The collected waste was sorted for recycling, with plastics being sent to recycling facilities and organic waste composted.\n\nThis event highlighted the urgent need for better waste management and reduced plastic use in our communities.",
+      "category": "Environment",
+      "featured": false,
+      "published": true
+    }
+  ]
 }
