@@ -1,23 +1,6 @@
 {
   "projects": [
     {
-      "id": "proj-1768477918202",
-      "title": "Trying Projrct functionality",
-      "category": "Health",
-      "location": "Accra",
-      "status": "planned",
-      "startDate": "2026-01-16",
-      "endDate": "2026-01-20",
-      "image": "images/hl6ch-faltering-global-growth-shows-no-signs-of-picking-up-in-the-near-term.webp",
-      "description": "trying my project functionality. this is the first try.",
-      "fullDescription": "jhvwejvdskdslknl;dsjmcdbkjcviycfuyewgoewhpen whiewiuvhviy jkiewugievcihvw",
-      "impact": [
-        "220+ trees"
-      ],
-      "featured": true,
-      "published": true
-    },
-    {
       "id": "proj-001",
       "title": "Green Ghana Reforestation",
       "category": "Environment",
