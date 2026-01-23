@@ -1,17 +1,6 @@
 {
   "articles": [
     {
-      "id": "news-1768477763815",
-      "title": "Try",
-      "date": "0226-01-15",
-      "category": "Youth",
-      "image": "images/hl6ch-faltering-global-growth-shows-no-signs-of-picking-up-in-the-near-term.webp",
-      "excerpt": "trying my news functionality",
-      "content": "trying the news functionality to see whether it works and everything is up to point",
-      "featured": true,
-      "published": true
-    },
-    {
       "id": "news-001",
       "title": "SOTE Plants 2,000 Trees in Annual Green Ghana Day Event",
       "date": "2025-01-08",
