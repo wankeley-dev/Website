@@ -1476,4 +1476,37 @@ h4 {
         font-size: 1.8rem;
         margin-bottom: 0.5rem;
     }
+    /* Fix mobile menu text visibility – make links brighter/white and higher contrast */
+    @media (max-width: 968px) {
+        .nav-menu {
+            background: linear-gradient(180deg, #0A1A14 0%, #0F2E25 100%) !important;
+            /* Slightly less opaque dark bg or keep your gradient */
+            /* Optional: add subtle texture or make it solid dark for better contrast */
+            /* background: #0A1A14 !important; */
+        }
+        .nav-menu .nav-link {
+            color: #ffffff !important;
+            /* Pure white instead of --text-light (#F8F8F8) */
+            font-weight: 600 !important;
+            /* Slightly bolder helps readability */
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+            /* Tiny shadow for extra pop on dark bg */
+        }
+        .nav-menu .nav-link:hover,
+        .nav-menu .nav-link.active {
+            color: var(--accent) !important;
+            /* Gold/yellow accent on hover/active for better feedback */
+        }
+        /* Make sure CTA button in mobile menu is visible too */
+        .nav-menu .nav-cta {
+            color: var(--text-dark) !important;
+            background: var(--accent) !important;
+            border: none !important;
+        }
+        /* Hamburger icon lines – make sure they're visible */
+        .nav-toggle span {
+            background: #ffffff !important;
+            /* Pure white when menu is closed */
+        }
+    }
 }
