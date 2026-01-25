@@ -8,6 +8,26 @@
     <title>About Us | SOTE Ghana</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <style>
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            /* Space between logo image and text */
+        }
+        
+        .nav-logo-img {
+            height: 50px;
+            /* or 60px for more presence */
+            width: auto;
+            border-radius: 8px;
+            /* ← remove this or set to 8px-12px for soft corners */
+            object-fit: contain;
+            /* better than cover for logos */
+            /* Optional: add subtle shadow or border if the image needs it */
+            /* filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); */
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +35,12 @@
     <nav class="navbar scrolled">
         <div class="container">
             <a href="index.html" class="nav-logo">
-                <span>SOTE<span class="logo-sub">Soldiers of the Environment</span></span>
+                <img src="images/logo.jpeg" alt="SOTE Ghana Logo" class="nav-logo-img">
+
+                <span>
+                    SOTE
+                    <span class="logo-sub">Soldiers of the Environment</span>
+                </span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>

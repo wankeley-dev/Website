@@ -4,12 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Stay updated with the latest news, events, and activities from SOTE Ghana's environmental and community programs.">
+    <meta name="description" content="Stay updated with the latest news, events, and activities from SOTE Ghana's environmental and community programs.">
     <title>News & Updates | SOTE Ghana</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <style>
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            /* Space between logo image and text */
+        }
+        
+        .nav-logo-img {
+            height: 50px;
+            /* or 60px for more presence */
+            width: auto;
+            border-radius: 8px;
+            /* ← remove this or set to 8px-12px for soft corners */
+            object-fit: contain;
+            /* better than cover for logos */
+            /* Optional: add subtle shadow or border if the image needs it */
+            /* filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); */
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +35,12 @@
     <nav class="navbar scrolled">
         <div class="container">
             <a href="index.html" class="nav-logo">
-                <span>SOTE<span class="logo-sub">Soldiers of the Environment</span></span>
+                <img src="images/logo.jpeg" alt="SOTE Ghana Logo" class="nav-logo-img">
+
+                <span>
+                    SOTE
+                    <span class="logo-sub">Soldiers of the Environment</span>
+                </span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -50,9 +73,8 @@
         <div class="container">
             <!-- News articles will be loaded dynamically from news.json -->
             <div class="news-grid">
-                <p class="loading-message"
-                    style="text-align: center; grid-column: 1/-1; padding: 2rem; color: var(--text-muted);">Loading news
-                    articles...</p>
+                <p class="loading-message" style="text-align: center; grid-column: 1/-1; padding: 2rem; color: var(--text-muted);">Loading news articles...
+                </p>
             </div>
 
             <!-- Load More -->
@@ -68,8 +90,7 @@
             <div class="cta-content reveal" style="max-width: 600px; margin: 0 auto; text-align: center;">
                 <h2>Never Miss an Update</h2>
                 <p style="color: rgba(255,255,255,0.8); margin-bottom: 2rem;">
-                    Subscribe to our newsletter and be the first to know about our projects,
-                    events, and impact stories.
+                    Subscribe to our newsletter and be the first to know about our projects, events, and impact stories.
                 </p>
                 <form class="newsletter-form" style="max-width: 450px; margin: 0 auto;">
                     <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
@@ -86,8 +107,7 @@
                 <div class="footer-brand">
                     <div class="nav-logo"><span>SOTE<span class="logo-sub">Soldiers of the Environment</span></span>
                     </div>
-                    <p>A Ghana-based NGO dedicated to environmental conservation, sustainable agriculture, and community
-                        health education since 2005.</p>
+                    <p>A Ghana-based NGO dedicated to environmental conservation, sustainable agriculture, and community health education since 2005.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook">f</a>
                         <a href="#" class="social-link" aria-label="Twitter">𝕏</a>

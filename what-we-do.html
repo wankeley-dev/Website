@@ -4,12 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Discover SOTE's three focus areas: Environmental Conservation, Sustainable Agriculture, and Community Health Education in Ghana.">
+    <meta name="description" content="Discover SOTE's three focus areas: Environmental Conservation, Sustainable Agriculture, and Community Health Education in Ghana.">
     <title>What We Do | SOTE Ghana</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+    <style>
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            /* Space between logo image and text */
+        }
+        
+        .nav-logo-img {
+            height: 50px;
+            /* or 60px for more presence */
+            width: auto;
+            border-radius: 8px;
+            /* ← remove this or set to 8px-12px for soft corners */
+            object-fit: contain;
+            /* better than cover for logos */
+            /* Optional: add subtle shadow or border if the image needs it */
+            /* filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); */
+        }
+    </style>
+
 </head>
 
 <body>
@@ -17,7 +37,12 @@
     <nav class="navbar scrolled">
         <div class="container">
             <a href="index.html" class="nav-logo">
-                <span>SOTE<span class="logo-sub">Soldiers of the Environment</span></span>
+                <img src="images/logo.jpeg" alt="SOTE Ghana Logo" class="nav-logo-img">
+
+                <span>
+                    SOTE
+                    <span class="logo-sub">Soldiers of the Environment</span>
+                </span>
             </a>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
@@ -57,9 +82,7 @@
                     <span class="section-label">Thematic Area 01</span>
                     <h2>🌳 Environmental Conservation</h2>
                     <p class="about-text">
-                        Ghana's forests are disappearing at an alarming rate. We're on the front lines,
-                        working with communities to protect and restore vital ecosystems that sustain
-                        life, combat climate change, and provide livelihoods.
+                        Ghana's forests are disappearing at an alarming rate. We're on the front lines, working with communities to protect and restore vital ecosystems that sustain life, combat climate change, and provide livelihoods.
                     </p>
                     <p class="about-text">Our environmental programs include:</p>
                     <ul class="about-list">
@@ -88,9 +111,7 @@
                     <span class="section-label">Thematic Area 02</span>
                     <h2>🌾 Sustainable Agriculture</h2>
                     <p class="about-text">
-                        Agriculture is the backbone of Ghana's economy, but unsustainable practices
-                        threaten both the environment and farmers' livelihoods. We empower smallholder
-                        farmers with knowledge and tools for sustainable, climate-smart farming.
+                        Agriculture is the backbone of Ghana's economy, but unsustainable practices threaten both the environment and farmers' livelihoods. We empower smallholder farmers with knowledge and tools for sustainable, climate-smart farming.
                     </p>
                     <p class="about-text">Our agricultural programs include:</p>
                     <ul class="about-list">
@@ -119,9 +140,7 @@
                     <span class="section-label">Thematic Area 03</span>
                     <h2>❤️ Community Health Education</h2>
                     <p class="about-text">
-                        Environmental and human health are deeply connected. We deliver vital health
-                        education programs to rural communities, focusing on prevention, awareness,
-                        and empowerment to improve quality of life.
+                        Environmental and human health are deeply connected. We deliver vital health education programs to rural communities, focusing on prevention, awareness, and empowerment to improve quality of life.
                     </p>
                     <p class="about-text">Our health programs include:</p>
                     <ul class="about-list">
@@ -145,36 +164,29 @@
                 <span class="section-label">How We Work</span>
                 <h2 class="section-title">Our Approach</h2>
                 <p class="section-text">
-                    We believe in community-driven, sustainable solutions that empower local people
-                    to become agents of change in their own environments.
+                    We believe in community-driven, sustainable solutions that empower local people to become agents of change in their own environments.
                 </p>
             </div>
             <div class="thematic-grid">
-                <div class="thematic-card reveal"
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                <div class="thematic-card reveal" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
                     <div class="thematic-icon">👂</div>
                     <h3 class="thematic-title" style="color: var(--text-light);">Listen First</h3>
                     <p class="thematic-text" style="color: rgba(255,255,255,0.7);">
-                        We begin by understanding community needs, challenges, and existing knowledge
-                        before designing any intervention.
+                        We begin by understanding community needs, challenges, and existing knowledge before designing any intervention.
                     </p>
                 </div>
-                <div class="thematic-card reveal"
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                <div class="thematic-card reveal" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
                     <div class="thematic-icon">🤝</div>
                     <h3 class="thematic-title" style="color: var(--text-light);">Partner With Communities</h3>
                     <p class="thematic-text" style="color: rgba(255,255,255,0.7);">
-                        Local people aren't just beneficiaries — they're partners who lead and own
-                        the projects that affect their lives.
+                        Local people aren't just beneficiaries — they're partners who lead and own the projects that affect their lives.
                     </p>
                 </div>
-                <div class="thematic-card reveal"
-                    style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
+                <div class="thematic-card reveal" style="background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);">
                     <div class="thematic-icon">📊</div>
                     <h3 class="thematic-title" style="color: var(--text-light);">Measure & Learn</h3>
                     <p class="thematic-text" style="color: rgba(255,255,255,0.7);">
-                        We track outcomes, learn from successes and failures, and continuously improve
-                        our programs based on evidence.
+                        We track outcomes, learn from successes and failures, and continuously improve our programs based on evidence.
                     </p>
                 </div>
             </div>
@@ -203,8 +215,7 @@
                 <div class="footer-brand">
                     <div class="nav-logo"><span>SOTE<span class="logo-sub">Soldiers of the Environment</span></span>
                     </div>
-                    <p>A Ghana-based NGO dedicated to environmental conservation, sustainable agriculture, and community
-                        health education since 2005.</p>
+                    <p>A Ghana-based NGO dedicated to environmental conservation, sustainable agriculture, and community health education since 2005.</p>
                     <div class="social-links">
                         <a href="#" class="social-link" aria-label="Facebook">f</a>
                         <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
