@@ -1,61 +1,60 @@
 {
-  "siteName": "SOTE",
-  "siteTagline": "Soldiers of the Environment",
-  "siteDescription": "A Ghana-based NGO dedicated to environmental conservation, sustainable agriculture, and community health education.",
-  "foundedYear": 2005,
-  "logo": {
-    "type": "emoji",
-    "value": "Ã°ÂÂÂ¿"
-  },
-  "colors": {
-    "primary": "#1b4d3e",
-    "primaryLight": "#2D7A5F",
-    "primaryDark": "#0F2E25",
-    "secondary": "#4a9c6d",
-    "accent": "#e8a849",
-    "accentLight": "#F4C77A"
-  },
-  "hero": {
-    "badge": "Ã°ÂÂÂ Protecting Ghana's Future Since 2005",
-    "title": "Defending Our <span class=\"highlight\">Environment</span> For Future Generations",
-    "subtitle": "We are Soldiers of the Environment Ã¢ÂÂ a passionate team of Ghanaians working to preserve our natural heritage, promote sustainable agriculture, and empower communities through health education.",
-    "backgroundImage": "images/hero-bg.png",
-    "ctaPrimary": {
-      "text": "Discover Our Mission",
-      "link": "about.html"
+    "siteName": "SOTE",
+    "siteTagline": "Soldiers of the Environment",
+    "siteDescription": "A Ghana-based NGO dedicated to environmental conservation, sustainable agriculture, and community health education.",
+    "foundedYear": 2005,
+    "logo": {
+        "type": "text",
+        "value": "SOTE"
     },
-    "ctaSecondary": {
-      "text": "Support Our Cause",
-      "link": "contact.html"
+    "colors": {
+        "primary": "#1b4d3e",
+        "primaryLight": "#2D7A5F",
+        "primaryDark": "#0F2E25",
+        "secondary": "#4a9c6d",
+        "accent": "#e8a849",
+        "accentLight": "#F4C77A"
+    },
+    "hero": {
+        "badge": "Protecting Ghana's Future Since 2005",
+        "title": "Defending Our <span class=\"highlight\">Environment</span> For Future Generations",
+        "subtitle": "We are Soldiers of the Environment - a passionate team of Ghanaians working to preserve our natural heritage, promote sustainable agriculture, and empower communities through health education.",
+        "backgroundImage": "images/hero-bg.png",
+        "ctaPrimary": {
+            "text": "Discover Our Mission",
+            "link": "about.html"
+        },
+        "ctaSecondary": {
+            "text": "Support Our Cause",
+            "link": "contact.html"
+        }
+    },
+    "stats": [{
+            "value": "40,000+",
+            "label": "Trees Planted"
+        },
+        {
+            "value": "50+",
+            "label": "Communities Reached"
+        },
+        {
+            "value": "18+",
+            "label": "Years of Impact"
+        }
+    ],
+    "contact": {
+        "email": "ebenTechnology@gmail.com",
+        "phone": "0502792754",
+        "address": "Accra, Ghana"
+    },
+    "social": {
+        "facebook": "#",
+        "twitter": "#",
+        "instagram": "#",
+        "linkedin": "#"
+    },
+    "footer": {
+        "copyright": "2025 Soldiers of the Environment (SOTE). All rights reserved.",
+        "tagline": "Made with love in Ghana"
     }
-  },
-  "stats": [
-    {
-      "value": "15000+",
-      "label": "Trees Planted"
-    },
-    {
-      "value": "50+",
-      "label": "Communities Reached"
-    },
-    {
-      "value": "18+",
-      "label": "Years of Impact"
-    }
-  ],
-  "contact": {
-    "email": "ebenTechnology@gmail.com",
-    "phone": "0502792754",
-    "address": "Accra, Ghana"
-  },
-  "social": {
-    "facebook": "#",
-    "twitter": "#",
-    "instagram": "#",
-    "linkedin": "#"
-  },
-  "footer": {
-    "copyright": "ÃÂ© 2025 Soldiers of the Environment (SOTE). All rights reserved.",
-    "tagline": "Made with Ã°ÂÂÂ in Ghana"
-  }
 }
