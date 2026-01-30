@@ -3,7 +3,7 @@
    Main JavaScript
    ============================================ */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Initialize all modules
     initNavbar();
     initMobileMenu();
@@ -77,7 +77,7 @@ function initScrollReveal() {
 /* Smooth Scroll for Anchor Links */
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 e.preventDefault();
@@ -92,7 +92,7 @@ function initContactForm() {
     const form = document.querySelector('.contact-form');
     if (!form) return;
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', function (e) {
         e.preventDefault();
 
         const inputs = form.querySelectorAll('.form-input, .form-textarea');
@@ -174,14 +174,17 @@ function initCountUp() {
 }
 
 function animateValue(element, start, end, duration) {
-    const suffix = element.textContent.replace(/[0-9]/g, '');
+    // Smartly extract suffix by removing digits, commas, and dots
+    const suffix = element.textContent.replace(/[0-9,.]/g, '');
     let startTime = null;
 
     const animation = (currentTime) => {
         if (!startTime) startTime = currentTime;
         const progress = Math.min((currentTime - startTime) / duration, 1);
         const value = Math.floor(progress * (end - start) + start);
-        element.textContent = value + suffix;
+
+        // Format number with commas and append suffix
+        element.textContent = value.toLocaleString() + suffix;
 
         if (progress < 1) {
             requestAnimationFrame(animation);
